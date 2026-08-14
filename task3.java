@@ -27,3 +27,11 @@ public class task3{
         sc.close();
     }
 } 
+
+
+Input
+5
+10 25 7 40 15
+Output
+Enter the number of elements: Enter the array elements:
+Maximum element = 40
