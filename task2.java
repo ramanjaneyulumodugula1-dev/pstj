@@ -31,8 +31,16 @@ public class task2 {
         } else {
             System.out.println("Element not found.");
         }
+     
 
         sc.close();
     }
 } 
+
+
+
+Input
+30
+Output
+Enter the element to search: Element found at index: 2
 
