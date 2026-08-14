@@ -14,3 +14,9 @@ public class task1 {
         sc.close();
     }
 }
+
+
+Input
+2
+Output
+Enter the index: Element at index 2 is: 30
