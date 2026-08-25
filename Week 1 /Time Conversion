@@ -1,0 +1,46 @@
+import java.io.*;
+import java.util.*;
+
+class Result {
+
+    public static String timeConversion(String s) {
+        String[] time = s.substring(0, 8).split(":");
+        int hour = Integer.parseInt(time[0]);
+
+        if (s.endsWith("PM") && hour != 12) {
+            hour += 12;
+        }
+
+        if (s.endsWith("AM") && hour == 12) {
+            hour = 0;
+        }
+
+        return String.format("%02d:%s:%s", hour, time[1], time[2]);
+    }
+}
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+
+        String s = bufferedReader.readLine();
+
+        String result = Result.timeConversion(s);
+
+        bufferedWriter.write(result);
+        bufferedWriter.newLine();
+
+        bufferedReader.close();
+        bufferedWriter.close();
+    }
+}
+
+
+
+Input:
+07:05:45PM
+
+
+Output:
+19:05:45
